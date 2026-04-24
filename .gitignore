@@ -1,0 +1,28 @@
+# Тимчасові папки Unity (найважчі)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Build]/
+/[Builds]/
+/[Logs]/
+/[MemoryCaptures]/
+
+# Файли проектів Visual Studio
+*.csproj
+*.unitypackage
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.IDB
+*.Lines
+
+# Тимчасові файли ОС
+.DS_Store
+Thumbs.db
