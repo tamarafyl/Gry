@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Echoes of the Forest\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\Echoes of the Forest\\Assets\\scripts\\MinigameZoneTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scripts\\MinigameZoneTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\Echoes of the Forest\\Library\\PackageCache\\com.unity.render-pipelines.universal@1ad96352dab8\\Shaders\\Terrain\\TerrainLit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@1ad96352dab8\\Shaders\\Terrain\\TerrainLit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MinigameZoneTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Echoes of the Forest\\Assets\\scripts\\MinigameZoneTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\MinigameZoneTrigger.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Echoes of the Forest\\Assets\\scripts\\MinigameZoneTrigger.cs",
+              "RelativeToolTip": "Assets\\scripts\\MinigameZoneTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T15:47:39.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "TerrainLit.shader",
               "DocumentMoniker": "C:\\Users\\Usuario\\Echoes of the Forest\\Library\\PackageCache\\com.unity.render-pipelines.universal@1ad96352dab8\\Shaders\\Terrain\\TerrainLit.shader",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@1ad96352dab8\\Shaders\\Terrain\\TerrainLit.shader",

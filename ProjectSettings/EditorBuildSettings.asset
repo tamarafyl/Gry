@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/The_Viking_Village.unity
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Scene_HuntingGame_Intro.unity
+    guid: 375fe48ee249036439f727edff384f90
+  - enabled: 1
+    path: Assets/Scenes/Scene_HuntingGame_Battle.unity
+    guid: 9aa9a2ac2a1cbb347bb5f8eb8e06a620
+  - enabled: 1
+    path: Assets/Scenes/Scene_GameOver.unity
+    guid: 9e75ef01198490a4a90e6ed00210f1eb
   m_configObjects: {}
