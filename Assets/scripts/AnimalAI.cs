@@ -74,23 +74,30 @@ public class AnimalAI : MonoBehaviour
 
     // Ta metoda jest wywoływana przez skrypt strzelania gracza
     public void OtrzymajObrazenia()
-    {
-        if (jestMartwy) return;
+{
+    if (jestMartwy) return;
 
-        jestMartwy = true;
-        agent.isStopped = true;
-        
-        // Resetujemy wszystkie pozostałe stany
-        animator.ResetTrigger("Walk");
-        animator.ResetTrigger("Run");
-        animator.ResetTrigger("Attack1");
+    jestMartwy = true;
+    gameObject.tag = "Untagged";
+    agent.isStopped = true;
+    agent.enabled = false; // ВИМИКАЄМО агент, щоб він не займав ресурси і не штовхався
 
-        // Losowa śmierć (Death1 lub Death2)
-        int typSmierci = Random.Range(1, 3);
-        animator.SetTrigger("Death" + typSmierci);
+    // Вимикаємо колайдер, щоб мертва тварина не була "стіною" для гравця
+    Collider col = GetComponent<Collider>();
+    if (col != null) col.enabled = false;
 
-        // Usuwamy ciało po 5 sekundach
-        Destroy(gameObject, 5f);
-        Debug.Log("Bestia została pokonana!");
-    }
+    // Скидаємо тригери анімацій
+    animator.ResetTrigger("Walk");
+    animator.ResetTrigger("Run");
+    animator.ResetTrigger("Attack1");
+
+    // Випадкова смерть
+    int typSmierci = Random.Range(1, 3);
+    animator.SetTrigger("Death" + typSmierci);
+
+    // МИ ВИДАЛИЛИ Destroy(gameObject, 5f); 
+    // Тепер тварина залишиться на сцені назавжди.
+    
+    Debug.Log("Bestia została pokonana i zostanie na ziemi!");
+}
 }

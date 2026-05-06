@@ -276,7 +276,7 @@ PrefabInstance:
     - target: {fileID: 2594713235056830955, guid: 0b26cd811d173394ea7ee69051b77c63,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.527525
+      value: 25.07
       objectReference: {fileID: 0}
     - target: {fileID: 2594713235056830955, guid: 0b26cd811d173394ea7ee69051b77c63,
         type: 3}
@@ -642,7 +642,7 @@ MonoBehaviour:
   nightAmbient: {r: 0, g: 0, b: 0, a: 1}
   dayFogDensity: 0
   nightFogDensity: 0
-  timeOfDay: 1
+  timeOfDay: 0
   nightExposure: 0.1
   dayExposure: 0.6
 --- !u!4 &1054035898
