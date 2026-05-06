@@ -14,19 +14,19 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.35
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: cb20c710b0721ef4d88cabbec2aa4da7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -35,9 +35,9 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.205
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 410087040}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -93,8 +93,10 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 077dd6c188632fd4dafb58a4adc83674,
+    type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 31a32214bef11de46af56865f4618f48,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -154,7 +156,7 @@ Light:
   serializedVersion: 13
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -197,7 +199,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5000
+  m_ColorTemperature: 3500
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -216,13 +218,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.7912401, y: 0.14845252, z: -0.21201217, w: 0.55403227}
+  m_LocalPosition: {x: 306.4, y: 45.8, z: 220.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 110, y: 30, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +322,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: House_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793253014371146413, guid: 0b26cd811d173394ea7ee69051b77c63,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -597,6 +604,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 467408190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1054035896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1054035898}
+  - component: {fileID: 1054035897}
+  m_Layer: 0
+  m_Name: DayNightManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1054035897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054035896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a3d91516ed5e1439db04eb620a2839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DayNightController
+  sun: {fileID: 410087040}
+  dayColor: {r: 1, g: 1, b: 1, a: 1}
+  nightColor: {r: 0.1, g: 0.1, b: 0.3, a: 1}
+  dayIntensity: 1
+  nightIntensity: 0
+  dayAmbient: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  nightAmbient: {r: 0, g: 0, b: 0, a: 1}
+  dayFogDensity: 0
+  nightFogDensity: 0
+  timeOfDay: 1
+  nightExposure: 0.1
+  dayExposure: 0.6
+--- !u!4 &1054035898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054035896}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1214073610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -742,8 +805,8 @@ MonoBehaviour:
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
     m_InvertInput: 1
-    m_MinValue: -45
-    m_MaxValue: 70
+    m_MinValue: -70
+    m_MaxValue: 45
     m_Wrap: 0
     m_Recentering:
       m_enabled: 0
@@ -1292,52 +1355,52 @@ PrefabInstance:
     - target: {fileID: 2275878696675951576, guid: b1e1c983dad574041a4b9881bd9f6d70,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.12629147
+      value: 0.117
       objectReference: {fileID: 0}
     - target: {fileID: 2275878696675951576, guid: b1e1c983dad574041a4b9881bd9f6d70,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0016456693
+      value: -0.022
       objectReference: {fileID: 0}
     - target: {fileID: 2275878696675951576, guid: b1e1c983dad574041a4b9881bd9f6d70,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.14228109
+      value: 0.195
       objectReference: {fileID: 0}
     - target: {fileID: 2275878696675951576, guid: b1e1c983dad574041a4b9881bd9f6d70,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6569023
+      value: 0.4062136
       objectReference: {fileID: 0}
     - target: {fileID: 2275878696675951576, guid: b1e1c983dad574041a4b9881bd9f6d70,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.3499468
+      value: 0.25414756
       objectReference: {fileID: 0}
     - target: {fileID: 2275878696675951576, guid: b1e1c983dad574041a4b9881bd9f6d70,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.52166927
+      value: -0.6322649
       objectReference: {fileID: 0}
     - target: {fileID: 2275878696675951576, guid: b1e1c983dad574041a4b9881bd9f6d70,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4169865
+      value: -0.60880256
       objectReference: {fileID: 0}
     - target: {fileID: 2275878696675951576, guid: b1e1c983dad574041a4b9881bd9f6d70,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -49.15
+      value: -34.289
       objectReference: {fileID: 0}
     - target: {fileID: 2275878696675951576, guid: b1e1c983dad574041a4b9881bd9f6d70,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 178.587
+      value: 274.951
       objectReference: {fileID: 0}
     - target: {fileID: 2275878696675951576, guid: b1e1c983dad574041a4b9881bd9f6d70,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -134.729
+      value: -80.98
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3899,3 +3962,4 @@ SceneRoots:
   - {fileID: 1219812025}
   - {fileID: 1214073610}
   - {fileID: 3893294197965807185}
+  - {fileID: 1054035898}
