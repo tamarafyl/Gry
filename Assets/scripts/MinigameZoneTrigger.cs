@@ -12,26 +12,37 @@ public class MinigameZoneTrigger : MonoBehaviour
     [Tooltip("Unikalna nazwa, np. 'Polowanie', 'Owoce', 'Hazard'")]
     public string idMinigry; 
 
-    // Lista gier, które zostały już aktywowane, aby nie otwierały się ponownie
+    // Lista gier, które zostały już aktywowane
     private static HashSet<string> aktywowaneGry = new HashSet<string>();
 
     private void OnTriggerEnter(Collider other)
     {
-        // Sprawdzamy, czy obiekt, który wszedł w strefę, ma tag 'Player'
         if (other.CompareTag("Player"))
         {
-            // Sprawdzamy, czy ta konkretna gra była już uruchomiona
             if (!aktywowaneGry.Contains(idMinigry))
             {
-                aktywowaneGry.Add(idMinigry); // Zapamiętujemy aktywację
-                Debug.Log("Uruchamianie minigry: " + idMinigry);
+                // --- ЗБЕРЕЖЕННЯ ПОЗИЦІЇ ---
+                PlayerPrefs.SetFloat("ReturnPosX", other.transform.position.x);
+                PlayerPrefs.SetFloat("ReturnPosY", other.transform.position.y);
+                PlayerPrefs.SetFloat("ReturnPosZ", other.transform.position.z);
+                PlayerPrefs.SetFloat("ReturnRotY", other.transform.eulerAngles.y);
+                PlayerPrefs.SetInt("ShouldRestorePosition", 1);
+                PlayerPrefs.Save(); 
+
+                // --- ДОДАНО: РОЗБЛОКУВАННЯ МИШІ ---
+                // Це звільняє курсор від контролера гравця
+                Cursor.lockState = CursorLockMode.None; 
+                // Це робить стрілку миші видимою на екрані
+                Cursor.visible = true; 
+
+                aktywowaneGry.Add(idMinigry); 
+                Debug.Log("Uruchamianie minigry: " + idMinigry + " | Pozycja zapisana | Mysz odblokowana.");
                 
-                // Ładowanie sceny z instrukcją
                 SceneManager.LoadScene(nazwaScenyIntro);
             }
             else
             {
-                Debug.Log("Ta minigra (" + idMinigry + ") została już ukończona lub otwarta wcześniej.");
+                Debug.Log("Ta minigra (" + idMinigry + ") została już ukończona.");
             }
         }
     }

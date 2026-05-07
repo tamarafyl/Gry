@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.2f1 (7a4c1aeef971) revision 8014874'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Usuario" at "2026-05-07T02:32:42.6468648Z"
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'es' Physical Memory: 40651 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Usuario" at "2026-05-06T23:48:58.7988985Z"
 Process architecture: x64
-Date: 2026-05-06T23:48:58Z
+Date: 2026-05-07T02:32:42Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.4.2f1\Editor\Unity.exe
@@ -19,7 +19,7 @@ C:/Users/Usuario/Echoes of the Forest
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57462
+56994
 -licensingIpc
 LicenseClient-Usuario
 -force-d3d12
@@ -68,12 +68,12 @@ C:/Users/Usuario/Echoes of the Forest
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [13276]  Target information:
+Player connection [28944]  Target information:
 
-Player connection [13276]  * "[IP] 10.185.192.249 [Port] 0 [Flags] 2 [Guid] 2180799447 [EditorId] 2180799447 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-7TH8RS7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [28944]  * "[IP] 10.185.192.249 [Port] 0 [Flags] 2 [Guid] 1008451569 [EditorId] 1008451569 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-7TH8RS7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [13276] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [13276] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [28944] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [28944] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 3
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -85,7 +85,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 2.91 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 56.44 ms, found 8 plugins.
 Initialize engine version: 6000.4.2f1 (7a4c1aeef971)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.2f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/Usuario/Echoes of the Forest/Assets
@@ -103,7 +103,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56268
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56516
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Error: HandshakeResponse reported an error:
@@ -111,45 +111,45 @@ Begin MonoManager ReloadAssembly
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Usuario"
 [Licensing::IpcConnector] LicenseClient-Usuario channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Usuario-6000.4.2" at "2026-05-06T23:48:59.6839598Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Usuario-6000.4.2" at "2026-05-07T02:32:44.8255428Z"
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002567 seconds.
+Registered in 0.005494 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              d1f7ca156ff74aadba81f7102c24bd7c
+  Correlation Id:          f80f81652c5ce0c3960f18434664cfee
+  External correlation Id: 6112561557321837366
+  Machine Id:              lLAt4F51QbKUdh87M4/Gvdv5eSk=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Usuario-6000.4.2" (connect: 0.00s, validation: 0.00s, handshake: 1.85s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Usuario-6000.4.2-notifications" at "2026-05-07T02:32:46.6831243Z"
+[Licensing::Module] Licensing Background thread has ended after 4.04s
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.400 seconds
-Domain Reload Profiling: 866ms
-	BeginReloadAssembly (111ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (67ms)
-	LoadAllAssembliesAndSetupDomain (235ms)
-		LoadAssemblies (108ms)
-		AnalyzeDomain (228ms)
-			TypeCache.Refresh (226ms)
-				TypeCache.ScanAssembly (211ms)
-	FinalizeReload (401ms)
+- Finished resetting the current domain, in  1.173 seconds
+Domain Reload Profiling: 2386ms
+	BeginReloadAssembly (297ms)
+	RebuildCommonClasses (143ms)
+	RebuildNativeTypeToScriptingClass (51ms)
+	initialDomainReloadingComplete (176ms)
+	LoadAllAssembliesAndSetupDomain (543ms)
+		LoadAssemblies (292ms)
+		AnalyzeDomain (525ms)
+			TypeCache.Refresh (522ms)
+				TypeCache.ScanAssembly (480ms)
+	FinalizeReload (1175ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (51ms)
-			BeforeProcessingInitializeOnLoad (84ms)
-			ProcessInitializeOnLoadAttributes (116ms)
-			ProcessInitializeOnLoadMethodAttributes (84ms)
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.18.1+9fbee8e
-  Session Id:              872ad863191c460db7b32e81f99d3d0c
-  Correlation Id:          2d1f7990feced542e9933d4e38563965
-  External correlation Id: 7320140206190372062
-  Machine Id:              lLAt4F51QbKUdh87M4/Gvdv5eSk=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Usuario-6000.4.2" (connect: 0.00s, validation: 0.00s, handshake: 0.88s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Usuario-6000.4.2-notifications" at "2026-05-06T23:49:00.563886Z"
-[Licensing::Module] Licensing Background thread has ended after 1.77s
+			InitializePlatformSupportModulesInManaged (134ms)
+			BeforeProcessingInitializeOnLoad (232ms)
+			ProcessInitializeOnLoadAttributes (467ms)
+			ProcessInitializeOnLoadMethodAttributes (154ms)
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
@@ -172,6 +172,7 @@ Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathemati
 Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
 Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
 Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.OpenImageIO.Editor.Tests.dll at Library/ScriptAssemblies/Unity.OpenImageIO.Editor.Tests.dll not valid. Loading of assembly skipped.
 Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
 Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
 Assembly Unity.Performance.Profile-Analyzer.EditorTests.dll at Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.EditorTests.dll not valid. Loading of assembly skipped.
@@ -197,6 +198,7 @@ Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.
 Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 7.07 ms, found 8 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -208,97 +210,474 @@ Native extension for WebGL target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 4.91 ms, found 8 plugins.
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.857 seconds
-Domain Reload Profiling: 1789ms
-	BeginReloadAssembly (157ms)
-		DisableScriptedObjects (5ms)
-		CreateAndSetChildDomain (26ms)
-	RebuildCommonClasses (37ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (63ms)
-	LoadAllAssembliesAndSetupDomain (659ms)
-		LoadAssemblies (309ms)
-		AnalyzeDomain (430ms)
-			TypeCache.Refresh (308ms)
-				TypeCache.ScanAssembly (289ms)
-			BuildScriptInfoCaches (101ms)
-			ResolveRequiredComponents (19ms)
-	FinalizeReload (858ms)
+- Finished resetting the current domain, in  1.978 seconds
+Domain Reload Profiling: 4089ms
+	BeginReloadAssembly (366ms)
+		DisableScriptedObjects (20ms)
+		CreateAndSetChildDomain (64ms)
+	RebuildCommonClasses (85ms)
+	RebuildNativeTypeToScriptingClass (29ms)
+	initialDomainReloadingComplete (145ms)
+	LoadAllAssembliesAndSetupDomain (1484ms)
+		LoadAssemblies (815ms)
+		AnalyzeDomain (839ms)
+			TypeCache.Refresh (633ms)
+				TypeCache.ScanAssembly (592ms)
+			BuildScriptInfoCaches (176ms)
+			ResolveRequiredComponents (26ms)
+	FinalizeReload (1979ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (158ms)
-			ProcessInitializeOnLoadAttributes (353ms)
-			ProcessInitializeOnLoadMethodAttributes (90ms)
-			AfterProcessingInitializeOnLoad (7ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+			InitializePlatformSupportModulesInManaged (5ms)
+			BeforeProcessingInitializeOnLoad (396ms)
+			ProcessInitializeOnLoadAttributes (817ms)
+			ProcessInitializeOnLoadMethodAttributes (156ms)
+			AfterProcessingInitializeOnLoad (9ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 5.55 ms, found 8 plugins.
 Unloading 190 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8885 unused Assets / (27.7 MB). Loaded Objects now: 9668.
-Memory consumption went from 240.9 MB to 213.3 MB.
-Total: 14.508100 ms (FindLiveObjects: 1.119200 ms CreateObjectMapping: 1.611300 ms MarkObjects: 5.333600 ms  DeleteObjects: 6.440900 ms)
+Unloading 9054 unused Assets / (24.8 MB). Loaded Objects now: 9830.
+Memory consumption went from 253.2 MB to 228.4 MB.
+Total: 27.958900 ms (FindLiveObjects: 1.968900 ms CreateObjectMapping: 1.920200 ms MarkObjects: 10.022900 ms  DeleteObjects: 14.043400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 913051.069720 seconds.
-  path: Assets/Scenes/Scene_HuntingGame_Battle.unity
-  importAddress: Guid(9aa9a2ac2a1cbb347bb5f8eb8e06a620) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Scenes/Scene_HuntingGame_Battle.unity using Guid(9aa9a2ac2a1cbb347bb5f8eb8e06a620) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0ba3f45c9bb62a636343345cb2b532e0') in 0.1003418 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f10392be6d203c5f4355bd2f11ee012d DependenciesID=6ba57ebcae42c8863a715453217240a7 StaticDependenciesID=b1f9e8da4b686c404dd70273ad9d16cf 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 46.280461 seconds.
-  path: Assets/Scenes/SampleScene
-  importAddress: Guid(740e2d1b8e4bd0944bf48ce36577b500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene using Guid(740e2d1b8e4bd0944bf48ce36577b500) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'b0414a169f648fc4bfe47baa96e504c6') in 0.0006308 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2e3c2703674d407f1329f30de19605d7 DependenciesID=7aebfc2a3bdec1d9a582e46b326a4cea StaticDependenciesID=7c7ad0da1259b31b4ebda92049cb61c7 
+  Time since last request: 922880.758607 seconds.
+  path: Assets/Scripts/CoconutWin.cs
+  importAddress: Guid(d93869a1ed50dfb4181c90f9d6afc910) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/CoconutWin.cs using Guid(d93869a1ed50dfb4181c90f9d6afc910) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'fdde57d676d1c31f0d23b4637db81457') in 0.1343165 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b5997bb0b6352723cb5413f63271175c DependenciesID=a0fb052f62740864b5dc1011d762a578 StaticDependenciesID=01c3d93c3a0b7f77407def38f74c1bd6 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.104004 seconds.
-  path: Assets/Scenes/SampleScene/LightingData.asset
-  importAddress: Guid(077dd6c188632fd4dafb58a4adc83674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene/LightingData.asset using Guid(077dd6c188632fd4dafb58a4adc83674) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '49aa08641e0130169398d9bc82cfc4e8') in 0.0157298 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e35f341325cb204205730d6b1f7d1329 DependenciesID=6a3bc691a20c9ede07ffc9aaf7eb09c1 StaticDependenciesID=ac8ab86145d67ee489ca46aaf0d20855 
+  Time since last request: 0.000052 seconds.
+  path: Assets/Terrain/Palm_Desktop_Atlas_Billboards.tga
+  importAddress: Guid(bbb561aa70120074aa9f05c1dbd770bf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/Palm_Desktop_Atlas_Billboards.tga using Guid(bbb561aa70120074aa9f05c1dbd770bf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c76433ea0e7b6b01e9db70525adf846c') in 0.0998906 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8f7c53c07b464b8c9127ec1544b45b7c DependenciesID=475e3da69a0da7916c6ca254cf7dd1a4 StaticDependenciesID=19af40382b88a6b3db332d2c7f1a10d5 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Book Assets/Textures/bark_1.jpg
+  importAddress: Guid(2c6b88c4018d344c9b026e17bff6cf6b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Book Assets/Textures/bark_1.jpg using Guid(2c6b88c4018d344c9b026e17bff6cf6b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b6bbdf41db753d9f2ef5cf5c8642665d') in 0.0224923 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eb732294f37e726521988e69072e9bab DependenciesID=37701bf21e2b7e8e4059aef92b03ec13 StaticDependenciesID=495dd37ab30e4ad90abd0de0538cc3f7 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/_TerrainAutoUpgrade/NewLayer.terrainlayer
+  importAddress: Guid(4df337a88eb9bf7458a127354ade8746) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/_TerrainAutoUpgrade/NewLayer.terrainlayer using Guid(4df337a88eb9bf7458a127354ade8746) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '592e77d8905614e00e4322fcce216fa9') in 0.0334035 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e47379d1982d8e392952a2c1d9f76bb8 DependenciesID=16df5695d8cc7f8aeece30c82e5d92fb StaticDependenciesID=740088c4910bf971dcfc9490d59763a0 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Scenes/SampleScene/ReflectionProbe-1.exr
-  importAddress: Guid(c9db5decc3a9cf2419ebd392de4916e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene/ReflectionProbe-1.exr using Guid(c9db5decc3a9cf2419ebd392de4916e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '1a2b42fa671d065d841f33ae0e971fb2') in 0.7503986 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d1995cf0fb8875ebc62d81edc8d15061 DependenciesID=38150bd5f97a7fc55e23136a9e54b996 StaticDependenciesID=1907cc5360cf35d041085baa95b452d3 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 325
+  Time since last request: 0.000026 seconds.
+  path: Assets/Terrain/PalmBark_Detail.tga
+  importAddress: Guid(b722a2c31f1834a4da06b8cc2b0e19a5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/PalmBark_Detail.tga using Guid(b722a2c31f1834a4da06b8cc2b0e19a5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3959844507280be8b97a824e3fa5b118') in 0.0212609 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9899c322b27dca055c8db5fc212a11e6 DependenciesID=4a6e4e5e776585348a5c7f26cfc4b721 StaticDependenciesID=833193ae35ef54ebcab2f320243b0367 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Scenes/SampleScene/Lightmap-0_comp_light.exr
-  importAddress: Guid(5f34b3b887078b74eabc92926ad7e046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene/Lightmap-0_comp_light.exr using Guid(5f34b3b887078b74eabc92926ad7e046) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'c5c03f253e6719daa95018c4afa9e564') in 0.036172 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8d40a6541655f4663168cb227709032a DependenciesID=56cbe156c5ead55c93282c2207842cbc StaticDependenciesID=2c9efd546429ca218e20e2c75e962ef9 
+  Time since last request: 0.000042 seconds.
+  path: Assets/Book Assets/Textures/bark_2.jpg
+  importAddress: Guid(764eed7c1d25347929363546dcd442bb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Book Assets/Textures/bark_2.jpg using Guid(764eed7c1d25347929363546dcd442bb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6aa6289b9cc18f6448a33d699b427196') in 0.0256039 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=697c8f280e4cebcf44274f10eab34391 DependenciesID=707ba312622454508c2e6a4dd2f3a958 StaticDependenciesID=6f5234e01c03d7eaa06fe467ad6efe18 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/polowanie.png
+  importAddress: Guid(8194d6a27b2229f4c92d31a8ab331849) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/polowanie.png using Guid(8194d6a27b2229f4c92d31a8ab331849) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '90d7c503b6b86599a31ab1316331ab1f') in 0.0413023 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bd2d80d40b6a5ea3428ac0be5218c70d DependenciesID=873caf03e261609190b70516bb4035e7 StaticDependenciesID=4f1282d84a8f8d9e7ce73bde023f05f7 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Terrain/PalmFrond.tga
+  importAddress: Guid(9e10cc0bb57060b44b7a604984e3f484) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/PalmFrond.tga using Guid(9e10cc0bb57060b44b7a604984e3f484) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ba0be238f2694cec6c717aac72c3af2a') in 0.0253986 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=674db59c34ffef70487c1b24a31280b6 DependenciesID=bdd6511c9e64e21276d81af70d74d011 StaticDependenciesID=4d9d8f108668a6fb02d9854ade27cc20 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  importAddress: Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/SampleScene.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '32ffaf0844358b1f2efaec77266b8bb2') in 0.0216619 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eccfd9974654d6ac4af5fdc667ed4ced DependenciesID=e6fb2f60769a84685d5075fb453bc69f StaticDependenciesID=33d386802a372e1b0954ee3ad133c30a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Book Assets/Textures/rock_4.jpg
+  importAddress: Guid(a7c761d520f7f4d2d86cce0650fcb052) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Book Assets/Textures/rock_4.jpg using Guid(a7c761d520f7f4d2d86cce0650fcb052) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '911c68110a65bd2de68348b7afa1bd8e') in 0.0225849 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9c9ee33a1958c0cca7ba65ccee55c30e DependenciesID=b4f60389bc1acb7c518ccede6c2de4a9 StaticDependenciesID=7ff4a694b7be244a6571623fcf4a58d5 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Terrain/CliffLayer.terrainlayer
+  importAddress: Guid(cdffec8605a81f544a76d51fff1fd6fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/CliffLayer.terrainlayer using Guid(cdffec8605a81f544a76d51fff1fd6fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd1aa99ede7f25697b9d1a091c614e589') in 0.0203183 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d25b0eeb6e07a63f5f53fd4318226935 DependenciesID=31d043f6ded3cd4ac97258c37ffece46 StaticDependenciesID=3780313f04b6406d4e5e9c691395eb47 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000072 seconds.
-  path: Assets/Scenes/SampleScene/Lightmap-2_comp_dir.png
-  importAddress: Guid(22663e3ba868c0a44ac6f9c341f4eee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene/Lightmap-2_comp_dir.png using Guid(22663e3ba868c0a44ac6f9c341f4eee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'd01fc764de64e1b455951a02afd2fec7') in 0.0217599 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e6cadf835b506ab7d6d1c5ab84eaa956 DependenciesID=3585a07de282ccdd7e14755c55f5ba01 StaticDependenciesID=4201006317db5a5f3c5a69bb98647df0 
+  Time since last request: 0.000029 seconds.
+  path: Assets/_TerrainAutoUpgrade/layer_dirt01b3407d0e55802f81.terrainlayer
+  importAddress: Guid(41f56e58024981241a690ddc198f966b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/_TerrainAutoUpgrade/layer_dirt01b3407d0e55802f81.terrainlayer using Guid(41f56e58024981241a690ddc198f966b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'cba2ca5a9bffc9cf1b8dce08a4332559') in 0.0199491 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ad7351180a2e454a091127bf5dd003a9 DependenciesID=0bb611f6edc9e3f1dfe71e3489a55b10 StaticDependenciesID=cf77e78c36609b49350f2f0bfc7d24a3 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Scripts/PlayerPositionRestorer.cs
+  importAddress: Guid(f5fbbd4326eedc848aca707e860bd25b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/PlayerPositionRestorer.cs using Guid(f5fbbd4326eedc848aca707e860bd25b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'dcc3217770391985fe372c8c4ad44c8f') in 0.0142375 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=96c6765306705be491232da4d9863eed DependenciesID=fdaf369811d2de80549fdf2716fdb465 StaticDependenciesID=607049591bfa1c195192f0bd267c5194 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000023 seconds.
-  path: Assets/Scenes/SampleScene/Lightmap-1_comp_dir.png
-  importAddress: Guid(0a029ef605df0d94aa44b58760b8c6b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene/Lightmap-1_comp_dir.png using Guid(0a029ef605df0d94aa44b58760b8c6b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'e9765e624fa9cf95e9c2bbd3b032462f') in 0.0152314 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bd43884dcb226a78d873a34f5ed7a761 DependenciesID=c6be1881361c7bb62f4b8696c5ce0b5f StaticDependenciesID=c4a6755ad0e446e991552e79f444217e 
+  path: Assets/Terrain/Sunny2_left.tif
+  importAddress: Guid(a02983de52e544b4abd0cb401dea5227) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/Sunny2_left.tif using Guid(a02983de52e544b4abd0cb401dea5227) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '74739d85aa331b834acdbf80adf6da16') in 0.0275517 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=46f98862842bed53f3f02a4510fac564 DependenciesID=f082b0b87fe25c46a6594acf5527c6da StaticDependenciesID=082225b31cd7755908e86e5051a222f0 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Book Assets/Textures/rock_2.jpg
+  importAddress: Guid(a724967f6560f4710baa6213256d1316) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Book Assets/Textures/rock_2.jpg using Guid(a724967f6560f4710baa6213256d1316) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '48e17739904196e50985c81d54fbca9a') in 0.021974 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c065135af723a5797f5bebded882f6a4 DependenciesID=994810eff2e3e018efd9b98aef8f27e5 StaticDependenciesID=249c7adb3930b54b838d295ece14782a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Scenes/Start.unity
+  importAddress: Guid(d29055a8b3c92ce4895bce57c3ec4c7e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/Start.unity using Guid(d29055a8b3c92ce4895bce57c3ec4c7e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f62d3ee0b8beda9ee9e0325447f09140') in 0.0165229 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=910163e403cc0dbcb6ec8b7d61316256 DependenciesID=48f56d1d44c03e54a5cb488ce4506c31 StaticDependenciesID=8ae8e8473c172d80d0454ef902fb10df 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Scripts/QuitGame.cs
+  importAddress: Guid(dbc3c82dc11d42a43935e29fae69be08) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/QuitGame.cs using Guid(dbc3c82dc11d42a43935e29fae69be08) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b230b72fb9e3e009693ae55c562a422d') in 0.0153299 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5fa633c65312ee26f4fd08841949df41 DependenciesID=56dca7f33c64345012fa1fa3ff0b8e67 StaticDependenciesID=763b8ff2c73760509cd830abef540b50 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/GameFactory_Fire Tourch Mech/Textures/GF_Fire_2.png
+  importAddress: Guid(34846430f9c96824bbaa25721e02f329) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/GameFactory_Fire Tourch Mech/Textures/GF_Fire_2.png using Guid(34846430f9c96824bbaa25721e02f329) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6448a2f978d77a1f72d271e2b2b9f940') in 0.02353 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5ba11ab9eb7dbfacfc9d7c1563094e09 DependenciesID=53290dc8252b127bb849265645099812 StaticDependenciesID=08f5ff7199f05806d112923921c196c8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Textures/grass01.tga
+  importAddress: Guid(6c41a2cea80b4fc499bac2a6c14a4514) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Fantasy Forest Environment Free Sample/Textures/grass01.tga using Guid(6c41a2cea80b4fc499bac2a6c14a4514) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e4270ef67e2222a2e3d1495f235b5aae') in 0.0262894 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=474759bc64dafbeba32ce73febedf75c DependenciesID=2742fc142992dc0bfcc75e759536a233 StaticDependenciesID=ea11b60e5e1f9479371b7433092f887b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/GameFactory_Fire Tourch Mech/Particles/Hand_TourchFire.prefab
+  importAddress: Guid(a56274021f37e77448276bab2477b3e3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/GameFactory_Fire Tourch Mech/Particles/Hand_TourchFire.prefab using Guid(a56274021f37e77448276bab2477b3e3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '39f500dd1340345b9f4af1f65666b5e3') in 0.6592235 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2132e3ebf8c6624e0e4e83ce63ae25f3 DependenciesID=900bb7d4067ce82ac296af3cbc9e0367 StaticDependenciesID=4c590980b026b6161340f0d0d107cb2d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/GameFactory_Fire Tourch Mech/Textures/GlowingCapsule.png
+  importAddress: Guid(fe1f401a814031747be765ee2897c6e3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/GameFactory_Fire Tourch Mech/Textures/GlowingCapsule.png using Guid(fe1f401a814031747be765ee2897c6e3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c146a6ba641170d75edfe268a77adfa8') in 0.0241089 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=229e3e11b2f5d816ab0ea351f48a20b7 DependenciesID=6fa76a5f175330186b4c536077f9a486 StaticDependenciesID=905cea2179ac00d949203e33947e91af 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Terrain/Palm_Desktop_Atlas_Normal.tga
+  importAddress: Guid(44d8c3648a6529d4288a10d05a011ae6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/Palm_Desktop_Atlas_Normal.tga using Guid(44d8c3648a6529d4288a10d05a011ae6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '639904e56b319b9a1a8a151fbf68301b') in 0.0215024 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2fd2c5ae0cc5f7586cc91de778bee1e8 DependenciesID=05688d0a10aa24349f7d2ac38d6998df StaticDependenciesID=10d6c63dd9127b1b51599c35e8b2fd66 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Terrain/Sunny2_front.tif
+  importAddress: Guid(769490cff14dc614d833d8bce2a61665) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/Sunny2_front.tif using Guid(769490cff14dc614d833d8bce2a61665) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e50f833b6968398558a22c13271154d6') in 0.0217954 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=01038e415070a371c96c8a126a24d665 DependenciesID=fee6b1cb0f546d134ca0c4070674f9bc StaticDependenciesID=6376dc31cb80f05240a2f765a43c0410 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TutorialInfo/Layout.wlt
+  importAddress: Guid(eabc9546105bf4accac1fd62a63e88e6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TutorialInfo/Layout.wlt using Guid(eabc9546105bf4accac1fd62a63e88e6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '485de161c720fc30b64de1740156aa18') in 0.0204032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=96acaaa562a74f5e930eed5cea21af7f DependenciesID=7727a2ae2d5e5898abd39aebb57d9dbd StaticDependenciesID=8fc76c5d890840b1ecd6a3fa413f5d98 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Scripts/Shooting.cs
+  importAddress: Guid(a73fc696591756a4492bd37d1ce72945) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/Shooting.cs using Guid(a73fc696591756a4492bd37d1ce72945) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '64701822364fc4849962bd63a2f1d2cf') in 0.0162893 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=84bcb9db417bb2b90934314bcb2cb3df DependenciesID=fcecc78359a79b33db96f4fe57298300 StaticDependenciesID=ca609d5ea878e83d802d4184c53050cf 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Hunter_1/Materials/M_Body.mat
+  importAddress: Guid(8097792a5f1e5374ca68b5308828e8d2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Materials/M_Body.mat using Guid(8097792a5f1e5374ca68b5308828e8d2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '587603ce2c49549ac45959384a41daf7') in 0.1219921 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=56c64067f097bdf50312fb749a04695f DependenciesID=81dadd8c83cd2fd4a2c4d62666b0c54e StaticDependenciesID=9dc51a9a4c6961a84b48b8d6bfc0a4df 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Hunter_1/Prefab/SK_belt_1.prefab
+  importAddress: Guid(438863da2b3bf6a4286e13bc00e93c62) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Prefab/SK_belt_1.prefab using Guid(438863da2b3bf6a4286e13bc00e93c62) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'fb40b6ad3e372a043e1638598b29b73a') in 0.0277352 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7af6ece2e18ec432424b33e5a28dd6b2 DependenciesID=4a74eda3e1876e614012d2e0d6e9eb89 StaticDependenciesID=467eca8a26ed1f7d2c6800368581ab31 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 44
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Hunter_1/Prefab/SK_bag.prefab
+  importAddress: Guid(3490607832fa3f043b6fa1afb4853998) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Prefab/SK_bag.prefab using Guid(3490607832fa3f043b6fa1afb4853998) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f0e69d52121995276ed9288dfd35e342') in 0.0174099 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a80be29170123df56fd3ace084b2daf7 DependenciesID=100c6ef8081728c51b3e92273a76cccc StaticDependenciesID=c01bdf3e95df05cc3f8f03b9c98a5c92 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 36
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/New Terrain.asset
+  importAddress: Guid(44219c82e3de09d42b9bf0144226548c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/New Terrain.asset using Guid(44219c82e3de09d42b9bf0144226548c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ceb985577c0cd73760333f97b8df1e54') in 0.0327527 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3ce7c9fc0ca181031fd338a4d3007e2c DependenciesID=76a1df66a53de711e0426dc199741885 StaticDependenciesID=04b3f7e88ce60f81e83b0d92c13f04f8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 32
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Hunter_1/Materials/M_Head.mat
+  importAddress: Guid(ae55f836b4b140a429549156c49aabdc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Materials/M_Head.mat using Guid(ae55f836b4b140a429549156c49aabdc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd49e551a9e9888a416651599f1b0179a') in 0.0407251 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e39ee7813531155ccd0f730f3d5a37fa DependenciesID=4aaeac8b737277a426f8de0795fe5ac6 StaticDependenciesID=60c196963bd9883baf0d470b3c4db34b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Scenes/Scene_GameOver.unity
+  importAddress: Guid(9e75ef01198490a4a90e6ed00210f1eb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/Scene_GameOver.unity using Guid(9e75ef01198490a4a90e6ed00210f1eb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e88799a95aae859312c3342e8550814a') in 0.019791 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=099fe0ba20ee5912ae623da1a6c50bbd DependenciesID=1a06d208d8141cf22a17f83e73c35e8f StaticDependenciesID=3e6f653025d5c266f52170f25d1eb439 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Hunter_1/Prefab/SK_weapon_3.prefab
+  importAddress: Guid(2352d1286e3fa404d8da42204d35ec3a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Prefab/SK_weapon_3.prefab using Guid(2352d1286e3fa404d8da42204d35ec3a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '21128e37a28347b690b1e8e14f004ae2') in 0.0192022 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a2f30efff9ae2464621dd3d0efd8023e DependenciesID=22dffeba2ecb092dc1b61c3628fa57a2 StaticDependenciesID=8ee49926eb445d8a382333c3e0b85e96 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 34
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Hunter_1/Prefab/SK_dress.prefab
+  importAddress: Guid(9dd0db0742a1e784499f4c63479c4367) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Prefab/SK_dress.prefab using Guid(9dd0db0742a1e784499f4c63479c4367) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3510e4536b1b2c09d7fea552f33d8d02') in 0.0227666 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ce703bf084a8b119d445e84459686a1a DependenciesID=9c01b197a570ccd33a5dfbd1d6256d3a StaticDependenciesID=a56f654f1256bee250ac19c937736a2d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 96
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Terrain/Palm_Desktop_Atlas.tga
+  importAddress: Guid(64e5f4340edad4845a95c06182fefa34) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/Palm_Desktop_Atlas.tga using Guid(64e5f4340edad4845a95c06182fefa34) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '92b49e64fcff0d69aa275d1df138ec75') in 0.0310053 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c2c2150d6331fa2a83c6c183168af467 DependenciesID=c0df61a4cad9f9d9c7805089453e3770 StaticDependenciesID=3ab0a2a69e4ef507bf899ae90500493f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/HDRPDefaultResources/DefaultSettingsVolumeProfile.asset
+  importAddress: Guid(8b2ae1ef6a2b3c9408fec8f9363b6d21) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/HDRPDefaultResources/DefaultSettingsVolumeProfile.asset using Guid(8b2ae1ef6a2b3c9408fec8f9363b6d21) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9ae0f757e67f9c02bf1b306a31040205') in 0.061412 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=66b4b8777cf787d495c46b3cee4e3242 DependenciesID=eb3562c4cbf06908e7983602f415ac37 StaticDependenciesID=3f3797822085c78fc357004a79c12f7a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Book Assets/Sounds/fire_atmosphere.wav
+  importAddress: Guid(ac75e7af84cd44802930c6ca5320b960) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Book Assets/Sounds/fire_atmosphere.wav using Guid(ac75e7af84cd44802930c6ca5320b960) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7790d1aafb65bf048ee42b23f12013d7') in 0.0265607 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=23fb235309415bf9a744150326990254 DependenciesID=39bf66454d2c2b5635d528d36d5a3e60 StaticDependenciesID=f84b5641ac03f0f0cc6cd54431c0cc10 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Terrain/GrassRockyAlbedo.psd
+  importAddress: Guid(a001f366240967c4db8338f6cee04de7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/GrassRockyAlbedo.psd using Guid(a001f366240967c4db8338f6cee04de7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '63e7d72ce5a09aee082a553878e22401') in 0.0258986 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a465b107732f00e8530d31d09d316f91 DependenciesID=e48f147286d45f0a3abecf23e3638d7a StaticDependenciesID=b13586459304d1535006b65e8b010e05 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/Terrain/PalmBark_Detail_Normal.tga
+  importAddress: Guid(2b7248074a75020489c7a7bac58d93c0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/PalmBark_Detail_Normal.tga using Guid(2b7248074a75020489c7a7bac58d93c0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '08b9d5cca75b90fd5b44b45976999733') in 0.0220224 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cf4f9d820d10721328fc067f85396998 DependenciesID=7f9ca9717a057727f7c0c6af52123ba9 StaticDependenciesID=774a37a95582b0e475b9f43796c95805 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hunter_1/Stand/Standard-2Sided.shader
+  importAddress: Guid(259f72d2184fc1b48ba7b3e9a190cd14) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Stand/Standard-2Sided.shader using Guid(259f72d2184fc1b48ba7b3e9a190cd14) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '515fc44c13c30d12c8900c7d6563cf3a') in 0.0220904 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dda0df7a25301db21410dec0bb305744 DependenciesID=d9932b02c83f3fe1f95f6d4288aba739 StaticDependenciesID=b2f18798e98299e7da87ef50c31ca292 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Hunter_1/Prefab/SM_weapon .prefab
+  importAddress: Guid(6c9be17f8f800a14bbc2222127c0d55d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Prefab/SM_weapon .prefab using Guid(6c9be17f8f800a14bbc2222127c0d55d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '433a6f76c806c8737d152ef9b7abd379') in 0.0221377 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f786faf92b7df4a590ba6bc8d936b08d DependenciesID=8f27fb23121849516993ec7deefa3ed6 StaticDependenciesID=ef73b78b390dc0ca8381c6595bb08cc4 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Hunter_1/Texture/T_Armor_Albedo.tga
+  importAddress: Guid(7d42b0f7b42cd4e44a97d207edeae4ff) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Texture/T_Armor_Albedo.tga using Guid(7d42b0f7b42cd4e44a97d207edeae4ff) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '00bb3b9505e6e27753c1cd7b85926a21') in 0.0280161 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=16e99001ff76d5e7a4a6c04ed32f6d46 DependenciesID=bf03023d3d23f7ff49c4af2497c2c0c1 StaticDependenciesID=c5c166e073ec811e533011196cd87cc6 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Hunter_1/Texture/Texture_3.tga
+  importAddress: Guid(8d955bd821d11a647a39bef78ede45b4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Texture/Texture_3.tga using Guid(8d955bd821d11a647a39bef78ede45b4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '85a5de8ac1b60a882e1154803347b833') in 0.0215627 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=17f51b1ae80e8ea6ca74f7c3251f15b0 DependenciesID=3ccad28a66e4f92422f08fa5d86ae3c7 StaticDependenciesID=430cbeba72718381b60faea17cdd29b7 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Hunter_1/Texture/T_Body_Albedo(Mix)2.tga
+  importAddress: Guid(d4328710fa11c4c4b895ded5283b93b8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Texture/T_Body_Albedo(Mix)2.tga using Guid(d4328710fa11c4c4b895ded5283b93b8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ad952731696df818697d8a4bf7ed6129') in 0.0516271 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ea5ab205c28d61ab97d1d4581981c51a DependenciesID=1c2353516d18339e81e80ddff48c389a StaticDependenciesID=9a8aa9beaa27f154bed81a32ccec5cd7 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Readme.asset
+  importAddress: Guid(8105016687592461f977c054a80ce2f2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Readme.asset using Guid(8105016687592461f977c054a80ce2f2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '247e496aa13b51b21da179fff2ff2192') in 0.0353272 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7ad775b5ecd2a77a1f154465c361dd1b DependenciesID=0334e152013890af7e25953b309a1b16 StaticDependenciesID=aea6e1cd556bfcdd983c43da83a41dd0 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 240.246825 seconds.
-  path: Assets/Fantasy Forest Environment Free Sample/Scenes/New Terrain.asset
-  importAddress: Guid(02bc0e2176f6a4e4ea3faf0c622664cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fantasy Forest Environment Free Sample/Scenes/New Terrain.asset using Guid(02bc0e2176f6a4e4ea3faf0c622664cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'c4c04347cdb2804d4a161bed826a2d39') in 0.062548 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dcdcd674c707789b149d77553a0ed4bb DependenciesID=bbce6f3486d8c6876e6fa7090a3a8b8e StaticDependenciesID=bd789defbe82ee581ad2f6973e6cefcb 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 33
+  Time since last request: 0.000029 seconds.
+  path: Assets/Hunter_1/Texture/T_Eyes_AO.tga
+  importAddress: Guid(8a07bd08ac122e04f9756b887784ebb9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Texture/T_Eyes_AO.tga using Guid(8a07bd08ac122e04f9756b887784ebb9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '47068ddb42454866fdd6d859a5980b33') in 0.0278786 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f30ad4294ba97f8e147ca12cd9fb55bd DependenciesID=fe9f48b3b4fcf53fdcc760caea5326c1 StaticDependenciesID=b733d1a0930fecd346be44e6992e617e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Hunter_1/Texture/T_Eyes_Specular.tga
+  importAddress: Guid(2bd9e9acd177ff8439169f7df54bb854) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Texture/T_Eyes_Specular.tga using Guid(2bd9e9acd177ff8439169f7df54bb854) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '97b4bb43f87882ca90aa0efd852f71c8') in 0.0222654 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8557d34eb0de4e32a9c69aa53c5bb3d2 DependenciesID=b7b658e5b6ec94b8c27eda5498ef6824 StaticDependenciesID=109b38ff256834adc2e1482d1185c8af 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Terrain/PalmBark_Normal.tga
+  importAddress: Guid(06c0876076de81c4a9a7afffedb7bb85) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/PalmBark_Normal.tga using Guid(06c0876076de81c4a9a7afffedb7bb85) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '40dc41ae31841dd11005f8b66a8283bc') in 0.0212767 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=64c35b7efafff9c3e2f7269b67671e65 DependenciesID=826c330514cc61501fefb8bfa1d34303 StaticDependenciesID=1d6cb3c9ff3af718606047aefd1171d2 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/GameFactory_Fire Tourch Mech/Audios/Fire Brust Sound Effect.wav
+  importAddress: Guid(481f2b6e83bd586429427dc44186e463) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/GameFactory_Fire Tourch Mech/Audios/Fire Brust Sound Effect.wav using Guid(481f2b6e83bd586429427dc44186e463) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '334b94429da55b91e94827b6d706e9f2') in 0.033253 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a9149df08a4c10a4dce44fec3573f71c DependenciesID=06a8e5aabcbcdc1fe53c27540027485d StaticDependenciesID=1f0ffc323ee81a46a048a13b3bae52cd 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Scripts/GameManager.cs
+  importAddress: Guid(75ecaeab92476a646b34dd1dd6bf64b1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/GameManager.cs using Guid(75ecaeab92476a646b34dd1dd6bf64b1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'cc7c25b35903239d49ee761023fb7b62') in 0.0162299 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=760d256610cc3ed3873085f7d310499c DependenciesID=b3a27f5e9948a49e9bad19e74a3b1e3a StaticDependenciesID=8ba2981de95e59428c86550653258cd1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Textures/grass01_b.tga
+  importAddress: Guid(b69992f31e7145e4ba49aa8118c5541c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Fantasy Forest Environment Free Sample/Textures/grass01_b.tga using Guid(b69992f31e7145e4ba49aa8118c5541c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3b80147f0cd7f7fca91fb04003ccabc5') in 0.0250188 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9111a7f408871ec9e5ac55eb5ef93427 DependenciesID=a0b6b4973b0ae74a33ea9d585b2eb2ae StaticDependenciesID=06f05e47166978c1aaf7207cac7fccde 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Terrain/CliffAlbedoSpecular.psd
+  importAddress: Guid(3d56d9a8df3f70948a8a8e834692679b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/CliffAlbedoSpecular.psd using Guid(3d56d9a8df3f70948a8a8e834692679b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5a3495468257777824189d347b1070cc') in 0.0222416 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0fcb5e7c78d272f3816c49b481045a59 DependenciesID=518adbced1a83489370b74572854b77c StaticDependenciesID=8efbc9a74c5e28c02389fdff843772b5 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Hunter_1/Texture/T_Fur_Normal.tga
+  importAddress: Guid(6af1838bc4f4ee047a889fd4beb3aa07) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Texture/T_Fur_Normal.tga using Guid(6af1838bc4f4ee047a889fd4beb3aa07) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '111218cf5ed0e062113297a0f8613d7b') in 0.0241026 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=55942bac6b1fa5ef672af9648d262985 DependenciesID=9762a22e7bf66045d6b176cc202a01a4 StaticDependenciesID=a83451314a206cc7a06e109ce94d01cd 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Hunter_1/Texture/T_Head_Albedo.tga
+  importAddress: Guid(1d30c8a28affb6c4c8c527a09b4b79e4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Hunter_1/Texture/T_Head_Albedo.tga using Guid(1d30c8a28affb6c4c8c527a09b4b79e4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b293fc7485889a9ce2a6fc6b0059973e') in 0.0267753 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0ebaffc3157dcc330492d1de9ebbca01 DependenciesID=e8ff9d46e72886b5cc89d44a4061abe5 StaticDependenciesID=347434743647806d27320699056dc405 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Terrain/WaterProDaytimeGradient.psd
+  importAddress: Guid(217dd2e73c1d5724387aa33b72bc8434) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Terrain/WaterProDaytimeGradient.psd using Guid(217dd2e73c1d5724387aa33b72bc8434) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '10e1f2153fc8a8495737c5c116f3167f') in 0.0288953 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=85ed35f829a8558e74d757e8de6de433 DependenciesID=4386d1197c297e39b81d44e0e745392c StaticDependenciesID=a0eb5ff7668702488f09a8826e6b37ab 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Resources/Input System/PlayerControlls.inputactions
+  importAddress: Guid(90efd6e1b27708e49a5ef573b109675e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Resources/Input System/PlayerControlls.inputactions using Guid(90efd6e1b27708e49a5ef573b109675e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter)
