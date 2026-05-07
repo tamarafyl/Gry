@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class GameManager : MonoBehaviour
 {
@@ -7,9 +8,9 @@ public class GameManager : MonoBehaviour
     [Header("Прогрес гравця")]
     public bool hasHuntingKey = false; 
     
-    [Header("Час доби")]
-    public bool isDay = true; // Змінна для тварин
-
+    [Header("Стан світу")]
+    public bool isDay = true;
+    public bool isTorchBurning = false; 
     void Awake()
     {
         if (instance == null)
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
     void InitializeGame()
     {
         hasHuntingKey = false; 
+        isTorchBurning = false; 
         PlayerPrefs.SetInt("ShouldRestorePosition", 0);
         PlayerPrefs.Save();
     }
@@ -38,5 +40,11 @@ public class GameManager : MonoBehaviour
             isDay = dayStatus;
             Debug.Log(isDay ? "Настав день!" : "Настала ніч!");
         }
+    }
+
+    public void PlayerDeath()
+    {
+        Debug.Log("Гравець загинув!");
+        SceneManager.LoadScene("Scene_GameOver");
     }
 }

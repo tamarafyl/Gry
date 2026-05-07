@@ -5,7 +5,7 @@ public class LevelManager : MonoBehaviour
 {
     [Header("Налаштування сцени")]
     public string mainSceneName = "ForestScene"; 
-    public float delayBeforeReturn = 3f;        
+    public float delayBeforeReturn = 0f;        
 
     private bool isLevelFinished = false;
 

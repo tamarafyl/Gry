@@ -10,7 +10,7 @@ public class TimerManager : MonoBehaviour
 
     [Header("Налаштування переходу")]
     public string gameOverSceneName = "GameOverScene"; // Назва вашої сцени смерті
-    public float delayBeforeGameOver = 1f;           // Невелика затримка перед завантаженням
+    public float delayBeforeGameOver = 0f;           // Невелика затримка перед завантаженням
 
     private bool isGameOver = false;
 
