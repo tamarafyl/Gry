@@ -4,8 +4,9 @@
 /[Oo]bj/
 /[Build]/
 /[Builds]/
-/[Logs]/
+/[Ll]ogs/
 /[MemoryCaptures]/
+/[Uu]ser[Ss]ettings/
 
 # Файли проектів Visual Studio
 *.csproj
