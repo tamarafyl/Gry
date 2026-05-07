@@ -5,7 +5,10 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [Header("Прогрес гравця")]
-    public bool hasHuntingKey = false; // Чи отримав гравець ключ за полювання
+    public bool hasHuntingKey = false; 
+    
+    [Header("Час доби")]
+    public bool isDay = true; // Змінна для тварин
 
     void Awake()
     {
@@ -23,9 +26,17 @@ public class GameManager : MonoBehaviour
 
     void InitializeGame()
     {
-        // При новому старті гри ключа немає
         hasHuntingKey = false; 
         PlayerPrefs.SetInt("ShouldRestorePosition", 0);
         PlayerPrefs.Save();
+    }
+
+    public void UpdateDayStatus(bool dayStatus)
+    {
+        if (isDay != dayStatus)
+        {
+            isDay = dayStatus;
+            Debug.Log(isDay ? "Настав день!" : "Настала ніч!");
+        }
     }
 }

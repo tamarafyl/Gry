@@ -1320,8 +1320,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 275, y: -75}
-  m_SizeDelta: {x: -750, y: -330}
+  m_AnchoredPosition: {x: 225, y: -70}
+  m_SizeDelta: {x: -650, y: -380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1344515874
 MonoBehaviour:
@@ -1612,7 +1612,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "ZASADY PRZETRWANIA\n\n1. Celuj w bestie za pomoc\u0105 myszki.\n2. Naci\u015Bnij
-    przycisk CTRL, aby odda\u0107 strza\u0142.\n3. Musisz wyeliminowa\u0107 wszystkie
+    przycisk x, aby odda\u0107 strza\u0142.\n3. Musisz wyeliminowa\u0107 wszystkie
     zagro\u017Cenia, aby prze\u017Cy\u0107.\n4. Je\u015Bli zwierz\u0119 Ci\u0119
     dotknie \u2014 przegrywasz."
   m_isRightToLeft: 0

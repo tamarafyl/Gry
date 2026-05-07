@@ -9,8 +9,7 @@ public class AnimalAI : MonoBehaviour
     private Transform gracz;
 
     [Header("Ustawienia dystansu")]
-    public float dystansAtaku = 2.5f; // Odległość, przy której zwierzę zaczyna atakować
-    
+    public float dystansAtaku = 2.5f; 
     private bool jestMartwy = false;
     private bool atakuje = false;
 
@@ -19,11 +18,9 @@ public class AnimalAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         
-        // Szukamy gracza po tagu (upewnij się, że gracz ma tag "Player")
         GameObject obiektGracza = GameObject.FindGameObjectWithTag("Player");
         if (obiektGracza != null) gracz = obiektGracza.transform;
 
-        // Rozpoczynamy od animacji chodzenia
         animator.SetTrigger("Walk");
     }
 
@@ -35,7 +32,6 @@ public class AnimalAI : MonoBehaviour
 
         if (dystansDoGracza > dystansAtaku)
         {
-            // POŚCIG
             atakuje = false;
             agent.isStopped = false;
             agent.SetDestination(gracz.position);
@@ -44,7 +40,6 @@ public class AnimalAI : MonoBehaviour
         }
         else
         {
-            // ATAK
             if (!atakuje)
             {
                 RozpocznijAtak();
@@ -55,11 +50,10 @@ public class AnimalAI : MonoBehaviour
     void RozpocznijAtak()
     {
         atakuje = true;
-        agent.isStopped = true; // Zatrzymujemy się, aby ugryźć
+        agent.isStopped = true; 
         
         animator.SetTrigger("Attack1");
 
-        // Wywołujemy śmierć gracza po krótkim opóźnieniu (czas na animację ataku)
         Invoke("ZabijGracza", 0.5f); 
     }
 
@@ -67,12 +61,10 @@ public class AnimalAI : MonoBehaviour
     {
         if (!jestMartwy) 
         {
-            // Ładujemy scenę GameOver
             SceneManager.LoadScene("Scene_GameOver");
         }
     }
 
-    // Ta metoda jest wywoływana przez skrypt strzelania gracza
     public void OtrzymajObrazenia()
     {
         if (jestMartwy) return;
@@ -80,16 +72,13 @@ public class AnimalAI : MonoBehaviour
         jestMartwy = true;
         agent.isStopped = true;
         
-        // Resetujemy wszystkie pozostałe stany
         animator.ResetTrigger("Walk");
         animator.ResetTrigger("Run");
         animator.ResetTrigger("Attack1");
 
-        // Losowa śmierć (Death1 lub Death2)
         int typSmierci = Random.Range(1, 3);
         animator.SetTrigger("Death" + typSmierci);
 
-        // Usuwamy ciało po 5 sekundach
         Destroy(gameObject, 5f);
         Debug.Log("Bestia została pokonana!");
     }
