@@ -5,12 +5,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [Header("Прогрес гравця")]
+    [Header("Postęp gracza")]
     public bool hasHuntingKey = false; 
     
-    [Header("Стан світу")]
+    [Header("Stan świata")]
     public bool isDay = true;
     public bool isTorchBurning = false; 
+    public int currentAttackersCount = 0;
+
     void Awake()
     {
         if (instance == null)
@@ -38,13 +40,23 @@ public class GameManager : MonoBehaviour
         if (isDay != dayStatus)
         {
             isDay = dayStatus;
-            Debug.Log(isDay ? "Настав день!" : "Настала ніч!");
+            Debug.Log(isDay ? "Nastał dzień!" : "Nastała noc!");
+        }
+    }
+
+    // Nowa metoda do aktualizacji stanu pochodni z innych skryptów
+    public void UpdateTorchStatus(bool torchStatus)
+    {
+        if (isTorchBurning != torchStatus)
+        {
+            isTorchBurning = torchStatus;
+            Debug.Log(isTorchBurning ? "Pochodnia jest teraz zapalona!" : "Pochodnia zgasła!");
         }
     }
 
     public void PlayerDeath()
     {
-        Debug.Log("Гравець загинув!");
+        Debug.Log("Gracz zginął!");
         SceneManager.LoadScene("Scene_GameOver");
     }
 }

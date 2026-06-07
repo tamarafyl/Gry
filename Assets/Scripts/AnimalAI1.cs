@@ -1,166 +1,267 @@
+using System.Collections; // Потрібно для роботи корутин (IEnumerator)
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class AnimalAI1 : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Animator animator;
-    private Transform player;
+    private Transform playerTransform;
 
-    [Header("Налаштування руху")]
-    public float wanderRadius = 15f;
-    public float wanderSpeed = 2f;
-    public float chaseSpeed = 5.5f;
-    public float attackDistance = 2.5f;
+    [Header("Ustawienia ruchu (Dzień)")]
+    public float walkSpeed = 2f;
+    public float patrolRadius = 15f;
+    public float minIdlingTime = 2f;
+    public float maxIdlingTime = 6f;
 
-    private float wanderTimer = 5f;
-    private float timer;
-    private bool isAttacking = false;
+    [Header("Ustawienia ataku (Noc)")]
+    public float runSpeed = 5f;
+    public int maxSimultaneousAttackers = 2; 
+
+    private enum StateNight { Idling, Chasing, Scared, GameOverTriggered }
+    private StateNight currentNightState = StateNight.Idling;
+
+    private float idleTimer;
+    private bool isIdling = false;
     
-    // Змінна для відстеження поточної анімації
-    private string currentAnimation; 
+    private float scaredTimer = 0f; 
+    private bool amIAttacking = false; 
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null) player = playerObj.transform;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            playerTransform = player.transform;
+        }
 
-        timer = wanderTimer;
-        PlayAnimation("Idle");
+        ChooseNewPatrolPoint();
     }
 
     void Update()
     {
-        if (player == null || !agent.isOnNavMesh) return;
-
-        // Перевірка на зупинку для Idle
-        if (agent.velocity.magnitude < 0.1f && !isAttacking)
-        {
-            PlayAnimation("Idle");
-        }
-
-        // Перевірка існування GameManager перед зверненням
         if (GameManager.instance == null) return;
 
-        bool isDay = GameManager.instance.isDay;
-
-        if (isDay)
+        // ПРИМУСОВО ЩОКАДРУ: Повністю вимикаємо обхід інших агентів (і вдень, і вночі)
+        if (agent != null && agent.obstacleAvoidanceType != ObstacleAvoidanceType.NoObstacleAvoidance)
         {
-            HandleWandering();
-        }
-        else
-        {
-            // HandleNightBehavior() закоментований нижче, тому вночі тварина просто стоятиме
-            // HandleNightBehavior(); 
-        }
-    }
-
-    // ЛОГІКА ДНЯ: Блукання
-    void HandleWandering()
-    {
-        agent.speed = wanderSpeed;
-        timer += Time.deltaTime;
-
-        if (timer >= wanderTimer)
-        {
-            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
-            agent.SetDestination(newPos);
-            PlayAnimation("Walk");
-            timer = 0;
+            agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
         }
 
-        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+        // Zarządzanie animacją Speed z плавним згладжуванням тремтіння
+        if (animator != null)
         {
-            PlayAnimation("Idle");
-        }
-    }
+            float realSpeed = agent.velocity.magnitude;
 
-    /* // ПЕРЕСЛІДУВАННЯ ТА АТАКА ЗАКОМЕНТОВАНІ
-    void HandleNightBehavior()
-    {
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-
-        if (GameManager.instance.isTorchBurning)
-        {
-            if (distanceToPlayer < 7f)
+            if (isIdling || realSpeed < 0.2f)
             {
-                FleeFromPlayer();
+                float currentParam = animator.GetFloat("Speed");
+                animator.SetFloat("Speed", Mathf.MoveTowards(currentParam, 0f, Time.deltaTime * 5f));
             }
-        }
-        else
-        {
-            if (distanceToPlayer > attackDistance)
+            else if (GameManager.instance.isDay)
             {
-                isAttacking = false;
-                agent.isStopped = false;
-                agent.speed = chaseSpeed;
-                agent.SetDestination(player.position);
-                PlayAnimation("Run");
-            }
-            else if (!isAttacking)
-            {
-                StartAttack();
-            }
-        }
-    }
-
-    void StartAttack()
-    {
-        isAttacking = true;
-        agent.isStopped = true;
-        PlayAnimation("Attack1");
-    }
-    */
-
-    void FleeFromPlayer()
-    {
-        agent.speed = chaseSpeed;
-        Vector3 runDirection = (transform.position - player.position).normalized;
-        Vector3 runTo = transform.position + runDirection * 5f;
-        agent.SetDestination(runTo);
-        PlayAnimation("Run");
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        // Колізія також закоментована, щоб тварина не вбивала гравця при випадковому торканні
-        /*
-        if (collision.gameObject.CompareTag("Player") && !GameManager.instance.isDay)
-        {
-            if (GameManager.instance.isTorchBurning)
-            {
-                FleeFromPlayer();
+                animator.SetFloat("Speed", 2f); // Walk
             }
             else
             {
-                GameManager.instance.PlayerDeath(); 
+                animator.SetFloat("Speed", 5f); // Run
             }
         }
-        */
+
+        // Podział logiki Dzień/Noc
+        if (GameManager.instance.isDay)
+        {
+            if (amIAttacking) StopAttacking();
+            currentNightState = StateNight.Idling;
+            
+            LogicDay();
+        }
+        else
+        {
+            // Якщо вже запустився процес смерті, зупиняємо виконання нічної логіки переслідування
+            if (currentNightState != StateNight.GameOverTriggered)
+            {
+                LogicNight();
+            }
+        }
     }
 
-    void PlayAnimation(string triggerName)
+    // --- LOGIKA DNIA ---
+    void LogicDay()
     {
-        if (currentAnimation == triggerName) return;
+        agent.speed = walkSpeed;
 
-        animator.ResetTrigger("Idle");
-        animator.ResetTrigger("Walk");
-        animator.ResetTrigger("Run");
-        animator.ResetTrigger("Attack1");
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+        {
+            if (!isIdling)
+            {
+                isIdling = true;
+                idleTimer = Random.Range(minIdlingTime, maxIdlingTime);
+            }
+        }
 
-        animator.SetTrigger(triggerName);
-        currentAnimation = triggerName;
+        if (isIdling)
+        {
+            idleTimer -= Time.deltaTime;
+            if (idleTimer <= 0)
+            {
+                isIdling = false;
+                ChooseNewPatrolPoint();
+            }
+        }
     }
 
-    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    void ChooseNewPatrolPoint()
     {
-        Vector3 randDirection = Random.insideUnitSphere * dist;
-        randDirection += origin;
-        NavMeshHit navHit;
-        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
-        return navHit.position;
+        Vector3 randomDirection = Random.insideUnitSphere * patrolRadius;
+        randomDirection += transform.position;
+        
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(randomDirection, out hit, 5f, NavMesh.AllAreas))
+        {
+            agent.SetDestination(hit.position);
+        }
+    }
+
+    // --- LOGIKA NOCY ---
+    void LogicNight()
+    {
+        if (playerTransform == null) return;
+        agent.speed = runSpeed;
+
+        if (currentNightState == StateNight.Scared)
+        {
+            scaredTimer -= Time.deltaTime;
+            
+            if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+            {
+                RunAwayFromPlayer(); 
+            }
+
+            if (scaredTimer <= 0f)
+            {
+                currentNightState = StateNight.Idling; 
+            }
+            return; 
+        }
+
+        if (currentNightState != StateNight.Chasing)
+        {
+            if (GameManager.instance.currentAttackersCount < maxSimultaneousAttackers)
+            {
+                StartAttacking();
+            }
+            else
+            {
+                if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+                {
+                    Vector3 randomNearPlayer = playerTransform.position + Random.insideUnitSphere * 12f;
+                    NavMeshHit hit;
+                    if (NavMesh.SamplePosition(randomNearPlayer, out hit, 12f, NavMesh.AllAreas))
+                    {
+                        agent.SetDestination(hit.position);
+                    }
+                }
+            }
+        }
+
+        if (currentNightState == StateNight.Chasing)
+        {
+            isIdling = false;
+            agent.SetDestination(playerTransform.position);
+        }
+    }
+
+    void StartAttacking()
+    {
+        currentNightState = StateNight.Chasing;
+        if (!amIAttacking)
+        {
+            amIAttacking = true;
+            GameManager.instance.currentAttackersCount++;
+        }
+    }
+
+    void StopAttacking()
+    {
+        currentNightState = StateNight.Idling;
+        if (amIAttacking)
+        {
+            amIAttacking = false;
+            GameManager.instance.currentAttackersCount = Mathf.Max(0, GameManager.instance.currentAttackersCount - 1);
+        }
+    }
+
+    void RunAwayFromPlayer()
+    {
+        Vector3 directionToPlayer = transform.position - playerTransform.position;
+        Vector3 runDestination = transform.position + directionToPlayer.normalized * patrolRadius;
+
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(runDestination, out hit, 10f, NavMesh.AllAreas))
+        {
+            agent.SetDestination(hit.position);
+        }
+    }
+
+    // --- KOLIZJA (Is Trigger) ---
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (GameManager.instance != null && GameManager.instance.isDay) return;
+
+            // Якщо ми вже в стані смерті, ігноруємо нові дотики від інших кабанів, щоб не запускати корутину кілька разів поспіль
+            if (currentNightState == StateNight.GameOverTriggered) return;
+
+            if (GameManager.instance != null && !GameManager.instance.isDay)
+            {
+                if (GameManager.instance.isTorchBurning)
+                {
+                    Debug.Log("Kolizja w nocy: Pochodnia płonie! Odstraszenie na 25s.");
+                    
+                    StopAttacking(); 
+                    currentNightState = StateNight.Scared;
+                    scaredTimer = Random.Range(20f, 30f); 
+                    
+                    RunAwayFromPlayer(); 
+                }
+                else
+                {
+                    Debug.Log("Kolizja w nocy: Brak pochodni! Start sekwencji śmierci.");
+                    // Замість миттєвого переходу, запускаємо корутину з паузою
+                    StartCoroutine(KillPlayerSequence());
+                }
+            }
+        }
+    }
+
+    // ДОДАНО: Корутина, яка робить паузу перед завантаженням екрана програшу
+   private IEnumerator KillPlayerSequence()
+    {
+        currentNightState = StateNight.GameOverTriggered;
+        
+        StopAttacking(); // Звільняємо чергу атак для інших тварин
+        
+        if (agent != null && agent.isOnNavMesh)
+        {
+            agent.isStopped = true; // Зупиняємо кабана, щоб він не біг крізь гравця під час атаки
+        }
+
+        // АКТИВУЄМО АНІМАЦІЮ АТАКИ
+        if (animator != null)
+        {
+            animator.SetTrigger("Attack1"); // Вмикаємо тригер Attack1, який видно на вашому скріншоті
+        }
+
+        // Чекаємо 2 секунди (поки програється анімація удару та гравець падає)
+        yield return new WaitForSeconds(2f);
+
+        // Переходимо на сцену смерті
+        SceneManager.LoadScene("Scene_GameOver");
     }
 }
