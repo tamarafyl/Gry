@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene_gambling_game.unity
     guid: 678047f6bc91f6b4ea4dffa4b05f547a
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: e6331fe36cc6f8347bf51ecc067def56
   m_configObjects: {}
