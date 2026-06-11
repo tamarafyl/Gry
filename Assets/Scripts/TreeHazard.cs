@@ -60,6 +60,23 @@ public class TreeHazard : MonoBehaviour
         // Optional: Destroy the falling fruit/branch after it hits the ground to clean up the scene
         if (collision.gameObject.CompareTag("Untagged") || collision.gameObject.layer == 0) // Default ground
         {
+            // 1. Save the key state in the persistent global data manager
+            if (GameManager.instance != null)
+            {
+                GameManager.instance.hasFallingKey = true;
+                Debug.Log("Ключ отримано та збережено в GameManager!");
+            }
+
+            // 2. NEW: Command the HUD system to instantly re-evaluate and draw the UI icons
+            if (HUDController.instance != null)
+            {
+                HUDController.instance.UpdateHUD();
+            }
+            else
+            {
+                Debug.LogWarning("[TRAP] Key granted, but HUDController instance was not found active on the scene context.");
+            }
+
             Destroy(gameObject, 1f); // Disappear after 1 second on the floor
         }
     }

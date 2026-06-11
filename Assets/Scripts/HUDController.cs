@@ -2,7 +2,26 @@ using UnityEngine;
 
 public class HUDController : MonoBehaviour
 {
-    public GameObject keyIcon; 
+    // Static instance allowing other scripts to easily trigger UI refreshes
+    public static HUDController instance;
+
+    public GameObject keyIcon;
+    public GameObject keyIcon2;
+    public GameObject keyIcon3;
+
+    void Awake()
+    {
+        // Set up the singleton instance layout
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         UpdateHUD();
@@ -10,10 +29,14 @@ public class HUDController : MonoBehaviour
 
     public void UpdateHUD()
     {
-        if (GameManager.instance != null && keyIcon != null)
+        // Added safety checks for all individual icon references
+        if (GameManager.instance != null)
         {
+            if (keyIcon != null) keyIcon.SetActive(GameManager.instance.hasHuntingKey);
+            if (keyIcon2 != null) keyIcon2.SetActive(GameManager.instance.hasGamblingKey);
+            if (keyIcon3 != null) keyIcon3.SetActive(GameManager.instance.hasFallingKey);
             
-            keyIcon.SetActive(GameManager.instance.hasHuntingKey);
+            Debug.Log("[HUD] UI icons updated based on current GameManager state.");
         }
     }
 }

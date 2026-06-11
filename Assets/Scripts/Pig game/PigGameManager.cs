@@ -150,7 +150,11 @@ public class PigGameManager : MonoBehaviour
     public void ExitToPreviousScene()
     {
         int previousSceneIndex = 1;//SceneManager.GetActiveScene().buildIndex - 1;
-
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.hasGamblingKey = true;
+            Debug.Log("Ключ отримано та збережено в GameManager!");
+        }
         // Safety check to ensure we don't try to load a negative scene index
         if (previousSceneIndex >= 0)
         {
