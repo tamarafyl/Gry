@@ -33,10 +33,10 @@ public class MinigameZoneTrigger : MonoBehaviour
                 // Це звільняє курсор від контролера гравця
                 Cursor.lockState = CursorLockMode.None; 
                 // Це робить стрілку миші видимою на екрані
-                Cursor.visible = true; 
+                // Cursor.visible = true; 
 
                 aktywowaneGry.Add(idMinigry); 
-                Debug.Log("Uruchamianie minigry: " + idMinigry + " | Pozycja zapisana | Mysz odblokowana.");
+                Debug.Log("Uruchamianie minigry: " + idMinigry + " | Pozycja zapisana.");
                 
                 SceneManager.LoadScene(nazwaScenyIntro);
             }

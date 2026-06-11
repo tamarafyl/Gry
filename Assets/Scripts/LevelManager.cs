@@ -28,10 +28,10 @@ public class LevelManager : MonoBehaviour
             }
             // --------------------------------
             if (GameManager.instance != null)
-    {
-        GameManager.instance.hasHuntingKey = true;
-        Debug.Log("Ключ отримано та збережено в GameManager!");
-    }
+            {
+                GameManager.instance.hasHuntingKey = true;
+                Debug.Log("Ключ отримано та збережено в GameManager!");
+            }
 
             Debug.Log("Всі тварини переможені! Повернення через " + delayBeforeReturn + " сек.");
             Invoke("ReturnToMainScene", delayBeforeReturn);
